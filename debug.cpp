@@ -45,11 +45,15 @@ int main(){
     cin >> yt;
     cout << "====================================================================================\n";
 
+repetisi:
     if (yt =='y' || yt =='Y')
     {
         system("cls");
-        cout << "Oh tidak, ada monster yang akan mengganggu kita. Bantu kami dalam mengalahkannya!\n*hint*\nSetiap jawaban benar yang Anda peroleh akan mendapatkan attack power sebesar 2";
-    }
+        cout << "Oh tidak, ada monster yang akan mengganggu kita. Bantu kami dalam mengalahkannya!\n*hint*\nSetiap jawaban benar yang Anda peroleh akan mendapatkan attack power sebesar 2\n==============================================================================\n";
+    }else																							
+	{
+		exit(0);
+	}
     
     for(int i = 0; i < totalQ; i++){
 		cout << "Question No: " << (i+1) << endl;
@@ -61,7 +65,7 @@ int main(){
 
 		cout << "0 is for skip. Select your answer as 1, 2, 3 or 4 here : ";
 		cin >> selected_option[i];
-		cout << endl << "=============================================" << endl << endl;
+		cout << endl << "==========================================================" << endl << endl;
 	}
 
 	//----- Printing Correct Options -----
@@ -111,11 +115,22 @@ int main(){
 			skipped++;
 		}
 	}
-    system("cls");
 	cout << "Total questions\t: " << totalQ << endl;
 	cout << "Correct answer\t\t: " << correct << endl;
 	cout << "Wrong answer\t\t: " << incorrect << endl;
 	cout << "Skipped\t\t\t: " << skipped << endl;
+	cout << "=======================================" << endl;
+	cout << "Apakah anda ingin mencoba lagi? (y/t)" << endl;
+	cin >> yt;
+	if (yt =='y' || yt =='Y')
+	{
+		goto repetisi;
+	}else
+	{
+		exit(0);
+	}
+	
+	
 
 	getch();
 	return 0;

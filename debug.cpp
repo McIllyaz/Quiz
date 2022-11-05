@@ -227,10 +227,12 @@ repetisi:
 	cin >> yt;
 	if (yt =='y' || yt =='Y')
 	{
+		system("cls");
 		goto repetisi;
 	}else
-	{  
-			int board[9] = {0,0,0,0,0,0,0,0,0}; //Starts empty board.
+	{ 
+	game: 
+	int board[9] = {0,0,0,0,0,0,0,0,0}; //Starts empty board.
 	int possibleWinner;
 	int move;
 	bool isInvalid;
@@ -240,6 +242,7 @@ repetisi:
 	int sides[4] = {1,3,5,7};
 
 	cout << "1|2|3\n-----\n4|5|6\n-----\n7|8|9\n\n";
+	cout << "Pilih angka 1 - 9 untuk mengisi X" << endl;
 
 	while (true) {
 		//Player X decides what move they'll do.
@@ -248,7 +251,7 @@ repetisi:
 			getline(cin, moveString);
 			move = moveString[0] - '1';
 			if (move > 8 || move < 0 || board[move] != 0) {
-				cout << "Invalid input" << endl;
+				cout << "Giliranmu" << endl;
 				isInvalid = true;
 			} else {
 				board[move] = 1;
@@ -285,6 +288,17 @@ repetisi:
 		//Decides whether or not the game continues.
 		if(gameOver(board)) break;
 
+	}
+	cout << "Apakah Anda ingin main lagi?";
+	cin >> yt;
+	if (yt =='y' || yt == 'Y')
+	{
+		system("cls");
+		goto game;
+	}else if(yt =='t' || yt == 'T')
+	{
+		cout << "Demikian presentasi dari kami";
+		exit(0);
 	}
 	}
 	getch();

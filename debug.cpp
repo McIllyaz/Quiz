@@ -113,34 +113,34 @@ int main(){
     char yt;
 
     string all_questions[10] = {    // all the questions
-	"Which is the smallest country?",
-	"Which is the capital of Argentina?",
-	"Which is called world population day?",
-	"Who is the first person to draw the map of earth?",
-	"Who was the first lady astronaut?",
-	"Who is the father of chemistry?",
-	"Who is the inventor of Rail Engine?",
-	"Which is the capital of America?",
-	"Which is not the member of G-8?",
-	"Which is the biggest ocean?" };
+	"Diketahui bahwa kantong P kosong, kantong Q berisi 10 buah kelereng dan kantong R berisi 15 kelereng.\nApabila yang terbawa hanya sebuah kantong dan dikatakan BUKAN Kantong P yang terbawa\n maka jumlah kelereng yang terbawa adalah :",
+	"Diberikan algoritma : \nApabila warna merah maka jadi hijau., \nApabila warna hijau maka jadi putih, \nselain warna merah dan hijau maka jadi ungu. \nJika kondisi input warna adalah hitam, maka warna jadi :",
+	"Instruksi P=Q akan mengakibatkan nilai P = nilai Q, dan nilai Q menjadi :",
+	"Apabila a=5, b = 10, maka jika diberikan instruksi a=b; b=a akan mengakibatkan ",
+	"Diberikan algoritma P=10; P=P+5; Q=P. Nilai P dan Q masing-masing adalah",
+	"Type data yang hanya mengenal kondisi True atau False pada Bahasa pemrograman C++ , adalah :",
+	"Dalam bahasa C++ terdapat suatu tipe data yang nilainya tidak boleh memiliki nilai desimal, yaitu :",
+	"Program C++ dirancang pertama kali oleh :",
+	"Tipe data yang digunakan untuk menampung sebuah karakter adalah :",
+	"Pada Tipe data Boolean, berlaku operator-operator" };
 
 	string all_options[10][4] = {    // all options
-	{"Maldivs","Vatican city","Fizi","Tuvalue"},
-	{"Buenes aires","Havana","Tokiyo","None of them"},
-	{"5 March","11 july","17 May","12 June"},
-	{"Aristotol","Neuton","Anaximander","Thales"},
-	{"Tomas alva","George King","Valentina Terescova","Nil Armstrong"},
-	{"Thomson","Robert boyel","John Dalton","Demitri Mendelieve"},
-	{"Jems watt","Michel Farady","Stiphenson","Kohen"},
-	{"Washington Dc","Moscow","Hawaii","California"},
-	{"France","Italy","Spain","Jarmany"},
-	{"Arctic ocean","Pacific Ocean","Indian ocean","Atlantic"},
+	{"10","10 dan 15","15","10 atau 15"},
+	{"Merah","Putih","Ungu","Abu-abu"},
+	{"Menjadi sembarang nilai","Menjadi hampa","Q tetap","Menjadi 0"},
+	{"a=0, b=5","a=b","a=10, b=5","a=10, b=10"},
+	{"15 dan 0","0 dan 10","0 dan 15","15 dan 15"},
+	{"Char","Bool","long int","Int"},
+	{"Float","Char","Bool","Int"},
+	{"Al Khawarizmi","Dennis Ritchie","Blaise Pascal","Al khalamizni"},
+	{"String","Int","Char","Boolean"},
+	{"IF","AND, OR, NOT","True, False","Case"},
     };
 
 	string correct_ans[10] = {    // correct options
-		"Vatican city","Buenes aires","11 july","Anaximander",
-		"Valentina Terescova","Robert boyel","Stiphenson",
-		"Washington DC","Spain","Pacific Ocean"
+		"10 atau 15","Ungu","Q tetap","a=10, b=10",
+		"15 dan 15","Bool","Int",
+		"Dennis Ritchie","Char","AND, OR, NOT"
     };
 
 	int selected_option[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
@@ -289,7 +289,7 @@ repetisi:
 		if(gameOver(board)) break;
 
 	}
-	cout << "Apakah Anda ingin main lagi?";
+	cout << "Apakah Anda ingin main lagi? (y/t)";
 	cin >> yt;
 	if (yt =='y' || yt == 'Y')
 	{
